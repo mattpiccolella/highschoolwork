@@ -1,0 +1,170 @@
+*
+{
+	border: 0;
+	margin: 0;
+	padding: 0;
+}
+
+/* =Basic HTML, Non-essential
+----------------------------------------------------------------------*/
+
+a
+{
+	text-decoration: none;
+}
+
+body
+{
+	background-color: #323B55;
+    background-image: -webkit-linear-gradient(bottom, #323B55 0%, #424F71 100%);
+    background-image: -moz-linear-gradient(bottom, #323B55 0%, #424F71 100%);
+    background-image: -o-linear-gradient(bottom, #323B55 0%, #424F71 100%);
+    background-image: -ms-linear-gradient(bottom, #323B55 0%, #424F71 100%);
+    background-image: linear-gradient(bottom, #323B55 0%, #424F71 100%);
+	margin: 0 auto;
+	padding: 5px;
+	position: relative;
+	width: 100%;
+}
+
+#gallery {
+	width: 800px;
+	display: block;
+	margin-left:auto;
+	margin-right:auto;
+	padding-left: 25px;
+}
+
+h1
+{
+	font: 60 60px/1.3 'Lobster Two', Helvetica, sans-serif;
+  	color: #add8e6;
+ 	text-shadow: 1px 1px 0px #ededed, 4px 4px 0px rgba(0,0,0,0.15);
+	font-size: xx-large;
+	border-bottom: 1px dashed #ccc;
+	margin: 0 0 10px;
+	padding: 0 0 5px;
+	text-align: center;
+}
+
+p
+{
+	clear: both;
+	font: 10px Verdana, sans-serif;
+	padding: 10px 0;
+	text-align: center;
+}
+
+p a
+{
+	background: inherit;
+	color: #777;
+}
+
+p a:hover
+{
+	background: inherit;
+	color: #000;
+}
+
+/* =Hoverbox Code
+----------------------------------------------------------------------*/
+
+.hoverbox
+{
+	cursor: default;
+	list-style: none;
+}
+
+.hoverbox a
+{
+	cursor: default;
+}
+
+.hoverbox a .preview
+{
+	display: none;
+}
+
+.hoverbox a:hover .preview
+{
+	display: block;
+	position: absolute;
+	top: -33px;
+	left: -45px;
+	z-index: 1;
+}
+
+.hoverbox img
+{
+	background: #fff;
+	border-color: #aaa #ccc #ddd #bbb;
+	border-style: solid;
+	border-width: 1px;
+	color: inherit;
+	padding: 2px;
+	vertical-align: top;
+	width: 100px;
+	height: 75px;
+}
+
+.hoverbox li
+{
+	background: #eee;
+	border-color: #ddd #bbb #aaa #ccc;
+	border-style: solid;
+	border-width: 1px;
+	color: inherit;
+	display: inline;
+	float: left;
+	margin: 3px;
+	padding: 5px;
+	position: relative;
+}
+
+.hoverbox .preview
+{
+	border-color: #000;
+	width: 200px;
+	height: 150px;
+}
+
+h2 {
+  font: 40 50px/1.3 'Lobster Two', Helvetica, sans-serif;
+  color: #2b2b2b;
+  text-align:center;
+  text-shadow: 1px 1px 0px #ededed, 4px 4px 0px rgba(0,0,0,0.15);
+}
+
+.bar img{ 
+border: 5px solid #ccc; 
+float: left; 
+margin: 10px 3.3%; 
+-webkit-transition: margin 0.5s ease-out; 
+-moz-transition: margin 0.5s ease-out; 
+-o-transition: margin 0.5s ease-out; 
+width: 9%;
+height: 9%;
+position: relative;
+top:80%;
+} 
+
+.bar img:hover { 
+margin-top: 4px; 
+} 
+
+#footer {
+	background-color: #add8e6;
+	position: fixed;
+	clear: both; /* this clear property forces the .container to understand where the columns end and contain them */
+	width: 100%;
+	bottom:0;
+	margin-left:-8px;
+	-moz-border-radius: 10px;
+	-webkit-border-radius: 10px;
+	border-radius: 10px; /* future proofing */
+	-khtml-border-radius: 10px; /* for old Konqueror browsers */
+	-moz-box-shadow:    inset 0 0 10px #000000;
+	-webkit-box-shadow: inset 0 0 10px #000000;
+	box-shadow:         inset 0 0 10px #000000;
+}
