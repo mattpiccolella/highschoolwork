@@ -1,0 +1,168 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<!-- Edited Current Site Template to add style to it and did some rearranging, let me konw what you guys think : Anthony-->
+<head><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Point Pleasant Borough National Honor Society</title>
+<link href="homestyle.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript">
+function getAbout()
+{
+	window.open("https://www.google.com/");
+}
+function open_win() 
+{
+	window.open("http://www.w3schools.com");
+}
+
+function getPointSystem()
+{
+	window.open("https://www.google.com/");
+}
+
+function getBecome(){
+
+}
+
+function getAdvise(){
+
+}
+
+function getOfficer(){
+
+}
+
+function getPoints(){
+
+}
+
+function validateForm(myForm) {
+	var x;
+	x=1;
+	if (myForm.studentid.value == "") {
+	alert("Please enter you User Name");
+	myForm.studentid.focus();
+	x=0;
+	return false;
+	}
+	if (myForm.password.value == "") {
+	alert("Please enter your Password");
+	myForm.password.focus();
+	x=0;
+	return false;
+	}
+	if (myForm.username.value == "") {
+	alert("Please enter you User Name");
+	myForm.username.focus();
+	x=0;
+	return false;
+	}
+	if (myForm.confirmed.value == "") {
+	alert("Please enter your Password");
+	myForm.confirmed.focus();
+	x=0;
+	return false;
+	}
+	if (myForm.confirmed.value != myForm.password.value) {
+	alert("Passwords do not match");
+	myForm.password.value = "";
+	myForm.confirmed.value = "";
+	myForm.password.focus();
+	x=0;
+	return false;
+	}
+	if (myForm.email.value == "") {
+	alert("Please enter your E-Mail");
+	myForm.email.focus();
+	x=0;
+	return false;
+	}
+	if (myForm.email.value.indexOf("@")<0){
+		alert("Please enter a valid E-Mail");
+		myForm.email.value="";
+		myForm.email.focus();
+		return false;
+	}
+	return true;
+	
+}
+		
+</script>
+</head>
+
+<body>
+<div id="header">
+<h1> <a href="home.php"> <img src="nhslogo.png" </img></a></h1>
+</div>
+<div class="container">
+<div id="navtab">
+<h2> Navigation </h2>
+
+	<p><button type="button" onclick="location.href='about.php'" style="background-color:transparent;"> About NHS </button></p>
+    <p><button type="button" onclick="location.href='events.php'" style="background-color:transparent;"> Events </button></p>
+    <p><button type="button" onclick="location.href='become.php'" style="background-color:transparent;"> Becoming an Officer</button></p>
+    <p><button type="button" onclick="location.href='officers.php'" style="background-color:transparent;"> Officers </button></p>
+    <p><button type="button" onclick="location.href='members.php'" style="background-color:transparent;"> Members </button></p>
+    
+</div>
+<div id="login">
+<form  action='login.php' method='post' accept-charset='UTF-8'>
+<fieldset >
+<legend>Log-In</legend>
+<input type='hidden' name='submitted' id='submitted' value='1'/>
+<label for='username' >UserName*:</label>
+<input type='text' name='username' id='username'  maxlength="50" />
+<label for='password' >Password*:</label>
+<input type='password' name='password' id='password' maxlength="50" />
+<input type='submit' name='Submit' value='Submit'onclick="location.href='home.php'" />
+<input type='button' name='Register' value='Register' onclick="location.href='register.html'"/>
+<input type='button' name='Forgot Password?' value="Forgot Password?" onclick="location.href='forgot.html'"/>
+</fieldset>
+</form>
+</div>
+<div id="upevents">
+	<h2> Upcoming Events </h2>
+	<ul> 
+	<li> Nomination of Students </li>
+	<li> Induction Ceremony </li>
+	</ul>
+</div>
+	<div id="maincontent">
+		<h1>Registration for New Members</h1>
+        <form onSubmit="return validateForm(webForm);" name="webForm" method="post" action="addmember.php">
+		<input type='hidden' name='submitted' id='submitted' value='1'/>
+		<label for='studentid' >Student ID #*:</label>
+		<input type='text' name='studentid' id='studentid' maxlength="50" />
+		<br> </br>
+		<label for='username' >Username*:</label>
+		<input type='text' name='username' id='username' maxlength="50" />
+		<br> </br>
+		<label for='password' >Password*:</label>
+		<input type='password' name='password' id='password' maxlength="50" />
+		<br> </br>
+		<label for='confirmed' >Re-Type Password*: </label>
+		<input type='password' name='confirmed' id='confirmed' maxlength="50" />
+		<br> </br>
+		<label for='email' > E-Mail Address*:</label>
+		<input type='text' name='email' id='email' maxlength="50" />
+		<br> </br>
+		<label for='gradelevel' > Grade Level*: </label>
+		<input type='radio' name='gradelevel' value='11' id='grade11'/> 11th </input>
+		<input type='radio' name='gradelevel' value='12' id='grade12'/> 12th </input>
+		<br> </br>
+		<input type='submit' name='Submit' value='Submit'/>
+        </form>
+        
+		<br> </br>
+	</div>
+</div>
+<div id="footer">
+    	<h4>National Honor Society Information</h4>
+        <ul>
+        	<li style="align:center">Officers: Matthew Piccolella President, Nick Fecci Vice President, RJ Curcio Secretary, Allison  Moran Treasurer</li>
+            <li style="align:center">Advisers: Mr. Gattuso, Mrs. Joyce</li>
+            <li style="align:center">Webmasters: Cory Brzycki, Anthony Perello, Matthew Piccolella</li>
+        </ul>
+</div>
+</body>
+</html>
