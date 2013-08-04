@@ -7,10 +7,10 @@
 
 
 <?php 
-$conf['server'] = 'localhost';
-$conf['db'] = 'NHS';
-$conf['user'] = 'admin_';
-$conf['password'] = 'gator123';
+$conf['server'] = '//taken out';
+$conf['db'] = '//taken out';
+$conf['user'] = '//taken out';
+$conf['password'] = '//taken out';
 
 $dbh = mysql_connect($conf['server'],$conf['user'],$conf['password']);
 
